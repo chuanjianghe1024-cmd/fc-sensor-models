@@ -1,35 +1,38 @@
-# FC 传感器模型仓库
+# FC Sensor Models
 
-**其他会话续接：先读 [HANDOFF.md](HANDOFF.md)。**
+适用于 ESP32-C3 SuperMini 与 BH1750 光照模块的 3D 打印外壳和机械参考模型。
 
-FC 传感器模型仓库，只保留两个模块参考模型和两个外壳版本。当前版本 **L7**，上一版实物原型 **L6**。
+外壳采用可折叠显示器支架、USB-C 开口及对准光敏芯片的采光孔。L7 使用内套口定位和隐藏胶槽，配合一颗 M3×30 螺丝连接折叠脚。
 
-本地目录：`E:\Users\HCJ\FC\fc-sensor-models`。GitHub 私有远程：`https://github.com/chuanjianghe1024-cmd/fc-sensor-models`。
+![L7 外壳](03_FC传感器外壳/当前版本_L7_加宽套口藏胶/L7-closed.png)
 
-| 目录 | 用途 |
+## 功能
+
+- 背靠背安装 C3 与 BH1750，四角支撑和盖内压条固定电路板。
+- 折叠脚支持 0–90° 调节，预留走线开口和双面胶凹槽。
+- 黑色主体、绿色装饰及齐平的透明 FC 字母与光波图案。
+- 提供 Fusion 原生模型、STEP、STL 和通用 3MF。
+
+## 快速开始
+
+1. 编辑模型：在 Autodesk Fusion 打开 [L7 装配](03_FC传感器外壳/当前版本_L7_加宽套口藏胶/FCS-L7-hidden-glue-assembly.f3d)。
+2. 准备打印：使用 [L7 print-files](03_FC传感器外壳/当前版本_L7_加宽套口藏胶/print-files)，每个零件选择单色或分色版本之一，导入单位为 mm。
+3. 按 [L7 打印与装配说明](03_FC传感器外壳/当前版本_L7_加宽套口藏胶/README.md) 检查摆放、桥接和材料映射，先干装再胶接。
+
+## 目录
+
+| 内容 | 入口 |
 |---|---|
-| `01_ESP32-C3-SuperMini` | 22.5×17.8 mm 的 C3 校准参考模型、原始网格及校准依据 |
-| `02_BH1750-GY302光照模块` | 18.5×14.2 mm 光照板 STEP/STL、估算尺寸和照片 |
-| `03_FC传感器外壳/当前版本_L6_单件平底` | 第一台原型版本，完整原生模型、四个打印零件和拓竹工程 |
-| `03_FC传感器外壳/当前版本_L7_加宽套口藏胶` | 左右加宽、内套圈和内部藏胶槽，当前设计 |
-| `docs` | 保留的约束、装配照片、清理记录及版本管理说明 |
+| C3 模块参考 | [ESP32-C3 SuperMini](01_ESP32-C3-SuperMini/README.md) |
+| 光照模块参考 | [BH1750 / GY-302](02_BH1750-GY302光照模块/README.md) |
+| L6 原型版 | [L6](03_FC传感器外壳/当前版本_L6_单件平底/README.md) |
+| L7 套口胶接版 | [L7](03_FC传感器外壳/当前版本_L7_加宽套口藏胶/README.md) |
+| 结构设计 | [设计说明](docs/DESIGN.md) |
+| 文件格式与用途 | [文件导航](docs/FILE_MAP.md) |
+| 修改与验证 | [开发指南](CONTRIBUTING.md) |
 
-## 打开与修改
+## 状态
 
-在 Fusion 中打开相应版本的装配 `.f3d`。L6 已有实物原型反馈，L7 已通过计算检查但未实物验证。F3D 内保留其构造历史及隐藏参考组件，以免破坏依赖；打印用各版 `print-files`，不要导出隐藏旧件。
+L6 已制作原型。L7 已完成 CAD 干涉检查和网格检查，套口配合、胶接效果及打印工艺仍待实物验证。模块上的部分小元件和孔位采用近似模型，不能替代装配测量。
 
-上盖和前挡板已补齐至 L6，不再依赖 L5 目录。L7 的 `.3mf` 是通用模型文件；L6 的 `L6_Complete_Set_Bambu.3mf` 是已有拓竹工程。选中单色或彩色其中一套，不要重复导入。
-
-## Git 使用
-
-在本目录运行 `git status` 查看变化，修改并导出后使用 `git add -A` 和 `git commit -m "说明实际改动"`。`git log --oneline --decorate` 查看版本记录。提交后运行 `git push origin main`，新增标签后运行 `git push origin --tags` 同步到远程。标签 `L6` 表示上一版基线，`L7` 表示本次保存的设计。
-
-不使用 Git LFS：目前最大的单文件约 5.6 MB，原生 CAD 和网格直接保存于 Git，恢复不依赖外部大文件存储。后续版本显著增大再决定是否迁移。每次修改保留有意义的源模型、必要打印件和验证记录，临时构造结果放在已忽略的 `generated/`。
-
-## 重新生成 L7
-
-在 Fusion 的“脚本与附加模块”添加 `03_FC传感器外壳/当前版本_L7_加宽套口藏胶/source/FCSModels`，运行 FCSModels。它导入仓库中的 L6 副本，生成 L7 新文档，输出到 `generated/L7-时间戳/`，不会覆盖现有版本文件。
-
-脚本辅助函数已集中到 `fusion_helpers.py`，不再加载旧 J/K/L5 工作目录。此轮只做代码路径整理和语法/依赖检查，没有再运行整套 CAD 重建；已验证的 L7 原生模型和打印文件字节保持不变。模块再生成脚本需 Python、numpy/trimesh 或 cadquery；环境不随 Git 打包。
-
-详见 `docs/清理记录.md` 和各版 README。
+本外壳面向成品模块组合；[FC PCB Designs](https://github.com/chuanjianghe1024-cmd/fc-pcb-designs) 中的定制 RevC 板具有不同尺寸和接口布局。
