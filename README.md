@@ -1,6 +1,8 @@
 # FC 传感器模型仓库
 
-本地 Git 仓库，只保留两个模块参考模型和两个外壳版本。当前版本 **L7**，上一版实物原型 **L6**。没有创建远程仓库或上传 GitHub。
+FC 传感器模型仓库，只保留两个模块参考模型和两个外壳版本。当前版本 **L7**，上一版实物原型 **L6**。
+
+本地目录：`E:\Users\HCJ\FC\fc-sensor-models`。GitHub 私有远程：`https://github.com/chuanjianghe1024-cmd/fc-sensor-models`。
 
 | 目录 | 用途 |
 |---|---|
@@ -18,7 +20,7 @@
 
 ## Git 使用
 
-在本目录运行 `git status` 查看变化，修改并导出后使用 `git add -A` 和 `git commit -m "说明实际改动"`。`git log --oneline --decorate` 查看版本记录。标签 `L6` 表示上一版基线，`L7` 表示本次保存的设计。
+在本目录运行 `git status` 查看变化，修改并导出后使用 `git add -A` 和 `git commit -m "说明实际改动"`。`git log --oneline --decorate` 查看版本记录。提交后运行 `git push origin main`，新增标签后运行 `git push origin --tags` 同步到远程。标签 `L6` 表示上一版基线，`L7` 表示本次保存的设计。
 
 不使用 Git LFS：目前最大的单文件约 5.6 MB，原生 CAD 和网格直接保存于 Git，恢复不依赖外部大文件存储。后续版本显著增大再决定是否迁移。每次修改保留有意义的源模型、必要打印件和验证记录，临时构造结果放在已忽略的 `generated/`。
 
