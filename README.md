@@ -1,5 +1,7 @@
 # FC 传感器模型仓库
 
+**其他会话续接：先读 [HANDOFF.md](HANDOFF.md)。**
+
 FC 传感器模型仓库，只保留两个模块参考模型和两个外壳版本。当前版本 **L7**，上一版实物原型 **L6**。
 
 本地目录：`E:\Users\HCJ\FC\fc-sensor-models`。GitHub 私有远程：`https://github.com/chuanjianghe1024-cmd/fc-sensor-models`。
