@@ -1,0 +1,15 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.manifest text eol=lf
+*.txt text eol=lf
+*.step binary
+*.stp binary
+*.f3d binary
+*.3mf binary
+*.stl binary
+*.png binary
+*.jpg binary
+*.JPG binary
+*.PNG binary

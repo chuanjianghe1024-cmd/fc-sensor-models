@@ -1,0 +1,62 @@
+{
+  "units": "mm",
+  "measured": {
+    "length": 18.5,
+    "width": 14.2,
+    "pcb_thickness": 1.1,
+    "assembly_thickness": 2.0
+  },
+  "coordinate_system": "Origin at bottom-left of component-side photo, X across width, Y toward 5-pin row, Z toward components.",
+  "estimated": {
+    "mounting_holes_xy": [
+      [
+        2.48,
+        2.58
+      ],
+      [
+        11.61,
+        2.51
+      ]
+    ],
+    "mounting_hole_diameter": 3.4,
+    "pin_holes_xy": [
+      [
+        1.92,
+        17.43
+      ],
+      [
+        4.53,
+        17.42
+      ],
+      [
+        7.15,
+        17.47
+      ],
+      [
+        9.83,
+        17.43
+      ],
+      [
+        12.45,
+        17.42
+      ]
+    ],
+    "pin_hole_diameter": 1.1,
+    "sensor_center_xy": [
+      7.277,
+      6.955
+    ]
+  },
+  "components": 55,
+  "step_roundtrip_valid": true,
+  "verified_extents": [
+    14.2,
+    18.5,
+    2.0
+  ],
+  "limitations": [
+    "Photo-derived hole sizes, component dimensions and positions are approximate.",
+    "PCB thickness and total thickness are user measurements. Individual component heights are allocated within that envelope.",
+    "No pin headers, wires or hand-solder blobs included. No old enclosure reused."
+  ]
+}

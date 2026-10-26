@@ -1,0 +1,27 @@
+{
+  "source": "C:\\Users\\HCJ\\Downloads\\esp32c3supermini.stl",
+  "source_sha256": "cbe31a9142efa3e7370a61ece4606fc7bdfcdb7aa62c7e4890638a5979204eba",
+  "pcb_mm": [
+    22.5,
+    17.8
+  ],
+  "usb_overhang_mm": 1,
+  "usb_cross_section_mm": [
+    8.8,
+    3.1
+  ],
+  "full_model_mm": [
+    23.5,
+    17.79999923706056,
+    4.09999990463257
+  ],
+  "watertight": true,
+  "faces": 3400,
+  "board_thickness_mm": 1,
+  "limitations": [
+    "PCB thickness 1 mm retained from source, not measured.",
+    "Other component shapes and positions remain approximate source geometry.",
+    "Soldered BH1750 assembly envelope 20 x 27 x 8.8 mm is separate.",
+    "No previous enclosure reused."
+  ]
+}
