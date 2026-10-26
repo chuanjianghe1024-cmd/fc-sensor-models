@@ -1,0 +1,289 @@
+{
+  "parts": {
+    "L7 Base - wider hidden glue channel:1": [
+      {
+        "bounds_mm": [
+          [
+            -11.3,
+            -8.805000000000001,
+            -11.400000000000002
+          ],
+          [
+            26.000000000000007,
+            31.195,
+            2.4
+          ]
+        ],
+        "volume_mm3": 7722.747197726211,
+        "solid": true
+      }
+    ],
+    "L11 Front hook - straight slide with generous fit:1": [
+      {
+        "bounds_mm": [
+          [
+            23.6,
+            6.244999999999998,
+            -15.600000000000001
+          ],
+          [
+            26.0,
+            16.145,
+            2.0999999999999996
+          ]
+        ],
+        "volume_mm3": 328.14,
+        "solid": true
+      }
+    ],
+    "L7 Cover - nested skirt no latches:1": [
+      {
+        "bounds_mm": [
+          [
+            -1.0,
+            -8.805000000000001,
+            0.12
+          ],
+          [
+            26.0,
+            31.195,
+            4.4
+          ]
+        ],
+        "volume_mm3": 2041.781762853528,
+        "solid": true
+      },
+      {
+        "bounds_mm": [
+          [
+            -1.0,
+            -8.805000000000001,
+            3.8
+          ],
+          [
+            26.0,
+            31.195,
+            4.4
+          ]
+        ],
+        "volume_mm3": 62.54483681395924,
+        "solid": true
+      }
+    ],
+    "L7 H leg - wider panel original M3 barrel:1": [
+      {
+        "bounds_mm": [
+          [
+            -9.2,
+            -8.805000000000001,
+            -15.600000000000001
+          ],
+          [
+            26.0,
+            31.195,
+            -5.8999999999999995
+          ]
+        ],
+        "volume_mm3": 3137.193494900627,
+        "solid": true
+      },
+      {
+        "bounds_mm": [
+          [
+            -1.0999999999999999,
+            -8.805000000000001,
+            -15.600000000000001
+          ],
+          [
+            26.0,
+            31.195,
+            -15.0
+          ]
+        ],
+        "volume_mm3": 37.938932657326056,
+        "solid": true
+      }
+    ],
+    "L6 M3x30 reference:1": [
+      {
+        "bounds_mm": [
+          [
+            -9.25,
+            -9.805000000000003,
+            -11.35
+          ],
+          [
+            -3.75,
+            23.195,
+            -5.85
+          ]
+        ],
+        "volume_mm3": 283.3323874456418,
+        "solid": true
+      }
+    ],
+    "NO NUT - direct plastic pilot trial:1": []
+  },
+  "intentional_thread_interference": [
+    {
+      "a": "L7 Base - wider hidden glue channel:1",
+      "b": "L6 M3x30 reference:1",
+      "mm3": 5.49971136928271
+    }
+  ],
+  "solid_collisions": [],
+  "board_collisions": [],
+  "motion_collisions": [],
+  "optical_reference": [
+    {
+      "name": "BH1750_body_reference:1",
+      "bounds_mm": [
+        [
+          10.420999999999996,
+          10.395,
+          1.28
+        ],
+        [
+          13.120999999999995,
+          11.995000000000001,
+          1.98
+        ]
+      ]
+    },
+    {
+      "name": "Optical_region_visual_marker:1",
+      "bounds_mm": [
+        [
+          11.220999999999997,
+          10.845,
+          1.98
+        ],
+        [
+          12.320999999999994,
+          11.545000000000002,
+          1.995
+        ]
+      ]
+    }
+  ],
+  "feature_issues": [],
+  "beyond_stop_collisions": [
+    {
+      "angle": 93,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 0.7509336466582153
+    },
+    {
+      "angle": 93,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 0.018374961242842505
+    },
+    {
+      "angle": 96,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 1.5342804961571126
+    },
+    {
+      "angle": 96,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 7.7699379603933725
+    },
+    {
+      "angle": 99,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 2.3547774215478894
+    },
+    {
+      "angle": 99,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 19.674992460118865
+    },
+    {
+      "angle": 102,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 3.217759760395754
+    },
+    {
+      "angle": 102,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 32.30331581769092
+    },
+    {
+      "angle": 105,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 4.129299256589052
+    },
+    {
+      "angle": 105,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 45.02804686120668
+    },
+    {
+      "angle": 108,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 4.8893872066794675
+    },
+    {
+      "angle": 108,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 57.68770869482321
+    },
+    {
+      "angle": 111,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 5.247230237443118
+    },
+    {
+      "angle": 111,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 70.25358608852295
+    },
+    {
+      "angle": 114,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 5.320000000000002
+    },
+    {
+      "angle": 114,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 82.74785560254459
+    },
+    {
+      "angle": 117,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 5.320000000000002
+    },
+    {
+      "angle": 117,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 95.2175987822198
+    },
+    {
+      "angle": 120,
+      "part": "L7 Base - wider hidden glue channel:1",
+      "mm3": 5.320000000000002
+    },
+    {
+      "angle": 120,
+      "part": "QA USB plug 12x6 assumed:1",
+      "mm3": 107.72582463132404
+    }
+  ],
+  "lid_insertion_collisions": [],
+  "design": {
+    "case_width_mm": 40,
+    "old_width_mm": 36,
+    "skirt_depth_mm": 1.5,
+    "skirt_clearance_per_side_mm": 0.25,
+    "glue_recess_depth_mm": 0.35,
+    "dry_rim_height_mm": 0.55,
+    "optical_center_mm": [
+      11.770999999999997,
+      11.194999999999999
+    ],
+    "sensor_to_lid_inner_gap_mm": 0.42,
+    "screw": "M3x30 socket head, direct plastic, no nut",
+    "pilot_mm": 2.7,
+    "effective_thread_engagement_mm": 4.094999999999999
+  }
+}
