@@ -21,3 +21,14 @@ A folding monitor-top enclosure for ESP32-C3 SuperMini and BH1750 modules. The 4
 [共享参考资源](assets/) · [提交规范](CONTRIBUTING.md)
 
 [Shared references](assets/) · [Contribution guide](CONTRIBUTING.md)
+
+
+## 使用许可 / Usage license
+
+本项目原创内容采用 [个人非商业使用许可 1.0](LICENSE)，仅供自然人个人非商业自用，可学习、修改和自制；不允许商业项目集成、企业业务或客户用途、收费服务，以及软件、固件、模型或打印成品销售。独立再分发也不获授权；向官方贡献的有限 fork/PR 例外见许可。其他用途须取得相关权利人书面授权。第三方及历史授权保持有效；这是源码/设计公开的受限许可，不是 OSI 开源许可。
+
+Original project material uses the [Personal Noncommercial Use License 1.0](LICENSE), solely for an individual's own noncommercial use, study, modification and DIY fabrication. Commercial integration, business/customer use, paid services and sales of software, firmware, models or printed products are not permitted. Independent redistribution is not granted; see the limited upstream fork/PR contribution exception. Other uses require written permission from the relevant rightsholders. Third-party and earlier grants remain effective. This is a restricted source/design-available license, not an OSI open-source license.
+
+模型许可包含个人自用打印，禁止销售外壳、套件或其他衍生成品。生产摆盘资料不授予商业生产权。assets/esp32-c3-supermini 的上游授权未记录，该参考模型及其嵌入部分不由本许可补授权；使用或再分发前须另行核实。
+
+Personal DIY printing is covered; enclosure, kit and derivative-product sales are prohibited. Production plate documentation does not grant commercial manufacturing rights. Upstream permission for assets/esp32-c3-supermini is unrecorded; this license does not supply permission for that reference or embedded copies. Verify rights separately before use or redistribution.

@@ -148,3 +148,14 @@ When geometry changes, regenerate affected exports, update both plate categories
 主要 Markdown 默认中英双语，在同一文件内中文在前、英文紧随对应段落或小节。根展示页保持简洁；表格可使用双语单元格，图片无需重复。后续新增接线、装配和摆盘说明及更新日志，也同时维护两种语言。路径、命令、版本字段和尺寸只保留准确原值；不重复机器读取字段，不另存一套英文文件。原始日志、代码和上游原文可维持原语言。提交前检查中英文状态、数量和限制一致。
 
 Major Markdown documents are bilingual by default, with Chinese followed by matching English paragraphs or sections in the same file. Keep the root showcase concise; use bilingual table cells and avoid repeating images. Maintain both languages for new wiring, assembly, plate instructions and changelogs. Preserve exact paths, commands, version fields and dimensions; do not duplicate machine-readable fields or create separate English copies. Raw logs, code and upstream documents may retain their original language. Check that status, quantities and limitations agree across languages before committing.
+
+
+## 使用许可 / Usage license
+
+本项目原创内容采用 [个人非商业使用许可 1.0](LICENSE)，仅供自然人个人非商业自用，可学习、修改和自制；不允许商业项目集成、企业业务或客户用途、收费服务，以及软件、固件、模型或打印成品销售。独立再分发也不获授权；向官方贡献的有限 fork/PR 例外见许可。其他用途须取得相关权利人书面授权。第三方及历史授权保持有效；这是源码/设计公开的受限许可，不是 OSI 开源许可。
+
+Original project material uses the [Personal Noncommercial Use License 1.0](LICENSE), solely for an individual's own noncommercial use, study, modification and DIY fabrication. Commercial integration, business/customer use, paid services and sales of software, firmware, models or printed products are not permitted. Independent redistribution is not granted; see the limited upstream fork/PR contribution exception. Other uses require written permission from the relevant rightsholders. Third-party and earlier grants remain effective. This is a restricted source/design-available license, not an OSI open-source license.
+
+新下载包必须附同版 LICENSE；保留第三方声明，不改历史标签。贡献仅按本许可提供有权提交的内容。
+
+New download bundles must include the matching LICENSE and third-party notices. Preserve historical tags. Submit only contributions you are entitled to offer under these terms.
