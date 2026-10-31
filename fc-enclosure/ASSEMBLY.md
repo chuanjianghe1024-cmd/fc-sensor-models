@@ -1,8 +1,10 @@
-# FC 外壳装配说明
+# FC 外壳装配说明 / FC enclosure assembly
 
 适用于当前 L7，单位 mm。主模型与版本信息见 [README](README.md)。以下尺寸和工艺来自已有设计记录，实物仍待验证。
 
-## 尺寸与装配约束
+Applies to current L7, in mm. See [README](README.md) for the master and version. The following dimensions and process notes come from existing design records; physical validation remains pending.
+
+## 尺寸与装配约束 / Dimensions and assembly constraints
 
 - 单位 mm；沿用 F3D 原坐标，禁止随意移动参考板。
 - C3 PCB 22.5×17.8，含 USB 长 23.5；BH1750 为 18.5×14.2。飞线、焊点与绝缘层另留空间。
@@ -13,3 +15,11 @@
 - 单颗 M3×30 内六角圆柱头螺丝，头下长度 30，无螺母；活动孔 Ø3.4、塑料底孔 Ø2.7，计算啮合约 4.10；开角 0–90°。
 - 打印：底壳/脚平底朝下，前挡板侧放，上盖外观面朝下套圈向上；复核桥接、USB 顶部、轴孔及多色映射。
 
+- Use mm and preserve the F3D coordinate system; do not arbitrarily move reference boards.
+- C3 PCB: 22.5×17.8, length with USB: 23.5; BH1750: 18.5×14.2. Allow extra space for wires, solder and insulation.
+- Base envelope including pivot supports: 37.3×40×13.8; lid footprint: 27×40; closed assembly height: approximately 20.
+- BH1750 sits across the back of C3. Align the aperture with the sensing IC, not the PCB center. Aperture/IC center: X=11.771, Y=11.195; IC-to-inner-lid clearance: approximately 0.42.
+- Preserve four-corner supports, lateral stops and the lid pressure rib opposite USB. Skirt wall: approximately 1; insertion: 1.5; clearance: 0.25 per side.
+- Each internal glue groove: length 19, height 0.7, depth 0.35; retain a 0.55 glue barrier at the external seam. Dry-fit first, then apply a small amount of glue; keep it off the sensor, USB and pivot.
+- One M3×30 socket-head cap screw, under-head length 30, no nut. Moving hole Ø3.4, plastic pilot Ø2.7, calculated engagement approximately 4.10; opening range 0–90°.
+- Print base/leg flat-side down, front stop on its side, lid exterior-face down with skirt upward. Recheck bridging, USB top, pivot holes and color/material mapping.
