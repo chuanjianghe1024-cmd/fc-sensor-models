@@ -71,3 +71,7 @@ Applies throughout this repository; local Codex and Fusion workflows must follow
 
    Maintain major Markdown documents in Chinese and English within the same file, Chinese first with corresponding English paragraphs or sections. Update both languages together, including introductions, instructions, changelogs and pending-validation status. Preserve paths, commands, Version/Tag/Source-Version fields and exact numeric values; do not duplicate machine-readable fields or create parallel .en.md copies. Code, raw logs and upstream documents may retain their original language.
 
+
+17. 本仓库为 FluentControl 官方配套硬件模型项目。新增模型或正式发布时，记录板卡/传感器组合、机械版本与验证状态；有实际软件约束时注明 FC/FCS 版本或协议及验收依据，未知则标待验证，不猜最低版本。维护 FC 与模型仓库双向入口；FCS 私有链接明确标注访问权限，公开文档不镜像私有源码。机械资料的公开不自动继承 FC 软件许可证。
+
+   This is FluentControl's official companion hardware model project. For new models/releases, record board/sensor combinations, mechanical revision and validation status. Where actual software constraints exist, identify FC/FCS versions or protocols and acceptance evidence; mark unknowns pending rather than guessing minimum versions. Maintain reciprocal FC/model links. Label private FCS links as access-restricted; do not mirror private source into public documentation. Public mechanical assets do not automatically inherit the FC software license.

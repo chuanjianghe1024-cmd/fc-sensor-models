@@ -35,6 +35,24 @@ F3D 已嵌入的参考组件保持不变。assets 为共享参考入口，不意
 
 Embedded F3D references are unchanged. The shared assets entry points do not imply that Fusion components were relinked or updated during reorganization.
 
+## 配套软件与适配范围 / Companion software and compatibility
+
+本模型属于 [FC 官方配套硬件项目](https://github.com/chuanjianghe1024-cmd/FluentControl)，适配 ESP32-C3 SuperMini + BH1750/GY-302 成品模块组合；具体尺寸见共享参考模型。它不是定制 PCB 外壳，也不意味着其他 C3 板型可以直接装入。机械版本 L7 与 FC/FCS 软件版本独立，当前未建立完整实机兼容矩阵。
+
+This model is part of the [official FC companion hardware project](https://github.com/chuanjianghe1024-cmd/FluentControl), designed for ESP32-C3 SuperMini + BH1750/GY-302 off-the-shelf modules; see shared references for dimensions. It is not an enclosure for a custom PCB or a guaranteed fit for other C3 boards. Mechanical revision L7 is independent of FC/FCS software versions; a complete hardware-tested compatibility matrix is not yet available.
+
+| 入口 / Resource | 用途与访问 / Purpose and access |
+|---|---|
+| [FC 下载 / Downloads](https://github.com/chuanjianghe1024-cmd/FluentControl/releases/latest) | 桌面客户端 / Desktop client |
+| [设备接入说明 / Device integration](https://github.com/chuanjianghe1024-cmd/FluentControl/blob/main/docs/device-signals.md) | 公开使用范围与限制 / Public scope and limitations |
+| [FCS Gateway](https://github.com/chuanjianghe1024-cmd/FluentControl/blob/main/docs/fcs-gateway.md) | 公开网关说明 / Public gateway documentation |
+| [C3 固件与安装 / Firmware and setup](https://github.com/chuanjianghe1024-cmd/FluentControl-Sensors/blob/main/c3/README.md) | 私有仓库，需访问权限 / Private repository, access required |
+| [接线说明 / Wiring](https://github.com/chuanjianghe1024-cmd/FluentControl-Sensors/blob/main/docs/wiring-2026-10-22.md) | 私有仓库，需访问权限 / Private repository, access required |
+
+使用顺序：核对板卡尺寸与可获得的兼容固件 → 获取[打印文件](print/README.md)并试打 → 按[装配说明](ASSEMBLY.md)干装 → 按对应固件说明接线、安装和检查读数 → 在 FC 中配置设备。没有 FCS 访问权限时，不能把私有链接当成公开固件下载入口。外壳、打印工艺与完整 FC/FCS 联调的验收分别记录。
+
+Suggested order: confirm board dimensions and access to compatible firmware → obtain [print files](print/README.md) and run a trial → dry-fit using the [assembly guide](ASSEMBLY.md) → follow the matching firmware instructions for wiring, installation and readings → configure the device in FC. Private FCS links are not public firmware downloads. Validate the enclosure, printing process and complete FC/FCS integration separately.
+
 ## 验证状态 / Validation status
 
 历史记录：静态与 PCB 干涉、分段插盖、0–90° 每 3° 转动采样、四件单色网格检查通过。不是对所有中间位置的连续验证。**L7 实物打印、套口、胶接、螺纹耐久仍待验证**。本次整理未重新运行 Fusion 或切片。

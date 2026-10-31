@@ -1,8 +1,10 @@
-# FC Sensor Models
+# FluentControl Companion Hardware Models
 
-FluentControl 的硬件模型项目：围绕环境光传感器设计紧凑外壳与安装结构。每个项目保留一个当前主模型，历史版本通过 Git tag 查看。
+[FluentControl（FC）](https://github.com/chuanjianghe1024-cmd/FluentControl) 的官方配套硬件模型项目：提供环境光传感器外壳、安装结构、3D 打印文件和装配指南。FC 负责桌面控制，FCS 负责设备接入与固件，本仓库负责机械结构。每个项目保留一个当前主模型，历史版本通过 Git tag 查看。
 
-Hardware model projects for FluentControl: compact enclosures and mounting structures for ambient-light sensors. Each project keeps one current master model; previous versions are available through Git tags.
+Official companion hardware models for [FluentControl (FC)](https://github.com/chuanjianghe1024-cmd/FluentControl): ambient-light sensor enclosures, mounting structures, 3D print files and assembly guides. FC handles desktop controls, FCS handles device integration and firmware, and this repository handles mechanical designs. Each project keeps one current master; previous versions are available through Git tags.
+
+[FC 桌面端 / Desktop app](https://github.com/chuanjianghe1024-cmd/FluentControl) · [公开设备接入说明 / Public device guide](https://github.com/chuanjianghe1024-cmd/FluentControl/blob/main/docs/device-signals.md) · [FCS 固件与设备协议 / Firmware and device protocols](https://github.com/chuanjianghe1024-cmd/FluentControl-Sensors)（私有，需授权 / private, access required）
 
 ## [FC 传感器外壳 / FC sensor enclosure · L7](fc-enclosure/)
 
