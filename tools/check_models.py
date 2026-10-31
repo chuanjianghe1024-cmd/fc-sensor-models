@@ -6,24 +6,33 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-LEGACY = {
-    "fc-enclosure": "model.f3d",
-    "esp32-c3-supermini": "model.stl",
-    "bh1750-gy302": "model.step",
-}
+LEGACY = {"fc-enclosure": "model.f3d"}
+RESERVED = {"assets", "tools", "generated", "__pycache__"}
 IMAGES = {"assembly.png", "three-view.png", "exploded.png"}
 
 def check(root, release=None):
     errors = []
-    models = root / "models"
-    if not models.is_dir():
-        return ["models/ missing"]
-    dirs = sorted(p for p in models.iterdir() if p.is_dir())
+    dirs = sorted(p for p in root.iterdir()
+                  if p.is_dir() and not p.name.startswith(".") and p.name not in RESERVED)
+    if not dirs:
+        errors.append("No model projects found at repository root")
     if release and release not in {p.name for p in dirs}:
         errors.append("Unknown release model: " + release)
-    for p in models.iterdir():
-        if not p.is_dir():
-            errors.append("Unexpected file in models/: " + p.name)
+    assets = root / "assets"
+    if not (assets / "README.md").is_file():
+        errors.append("assets/README.md missing")
+    if assets.is_dir():
+        for asset in assets.iterdir():
+            if not asset.is_dir():
+                if asset.name != "README.md":
+                    errors.append("Unexpected assets file: " + asset.name)
+                continue
+            sources = [p for p in asset.iterdir() if p.is_file() and p.name in
+                       {"model.stl", "model.step", "model.f3d", "model.f3z"}]
+            if len(sources) != 1 or any(p.stat().st_size == 0 for p in sources):
+                errors.append(asset.name + ": require one nonempty shared reference model")
+            if not (asset / "README.md").is_file():
+                errors.append(asset.name + ": shared reference README missing")
     for model in dirs:
         name = model.name
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
@@ -39,7 +48,9 @@ def check(root, release=None):
             if not p.is_file():
                 continue
             rel = p.relative_to(model).as_posix()
-            allowed = rel == "README.md" or rel in allowed_sources or rel in {"images/" + i for i in IMAGES}
+            if rel.startswith(("generated/", "__pycache__/")):
+                continue
+            allowed = rel in {"README.md", "WIRING.md", "ASSEMBLY.md"} or rel in allowed_sources or rel in {"images/" + i for i in IMAGES} or (rel.startswith("docs/") and p.suffix.lower() in {".md", ".png", ".jpg", ".jpeg", ".svg", ".pdf"})
             if not allowed:
                 errors.append(name + ": unexpected tracked-layout file " + rel)
             elif p.stat().st_size == 0:
@@ -63,6 +74,26 @@ def check(root, release=None):
             for image in ("three-view.png", "exploded.png"):
                 if not (model / "images" / image).is_file():
                     errors.append(name + ": release image missing: " + image)
+    home = root / "README.md"
+    if not home.is_file():
+        errors.append("Root showcase README missing")
+    else:
+        home_text = home.read_text(encoding="utf-8")
+        for model in dirs:
+            if model.name + "/" not in home_text:
+                errors.append(model.name + ": missing root showcase entry")
+            if release == model.name and not re.search(
+                r"!\[[^\]]*\]\(" + re.escape(model.name + "/images/three-view.png") + r"\)", home_text):
+                errors.append(model.name + ": root showcase must embed latest three-view.png")
+    for doc in root.rglob("*.md"):
+        if any(part.startswith(".") or part in {"generated", "__pycache__"} for part in doc.relative_to(root).parts):
+            continue
+        for link in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", doc.read_text(encoding="utf-8")):
+            if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", link) or link.startswith("#"):
+                continue
+            target = link.split("#", 1)[0]
+            if target and not (doc.parent / target).exists():
+                errors.append(str(doc.relative_to(root)) + ": broken local link " + link)
     return errors
 
 def main():
