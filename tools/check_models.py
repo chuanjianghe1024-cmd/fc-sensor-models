@@ -51,10 +51,18 @@ def check(root, release=None):
             if rel.startswith(("generated/", "__pycache__/")):
                 continue
             allowed = rel in {"README.md", "WIRING.md", "ASSEMBLY.md"} or rel in allowed_sources or rel in {"images/" + i for i in IMAGES} or (rel.startswith("docs/") and p.suffix.lower() in {".md", ".png", ".jpg", ".jpeg", ".svg", ".pdf"})
+            allowed = allowed or (rel.startswith(("print/stl/", "print/step/", "print/3mf/")) and
+                                  p.suffix.lower() == {"stl": ".stl", "step": ".step", "3mf": ".3mf"}.get(rel.split("/")[1]))
+            allowed = allowed or rel == "print/README.md" or (
+                rel.startswith(("print/plates/validation/", "print/plates/production/")) and
+                p.name in {"README.md", "project.3mf", "preview.png"})
             if not allowed:
                 errors.append(name + ": unexpected tracked-layout file " + rel)
             elif p.stat().st_size == 0:
                 errors.append(name + ": empty file " + rel)
+        for needed in ("print/README.md", "print/plates/validation/README.md", "print/plates/production/README.md"):
+            if not (model / needed).is_file():
+                errors.append(name + ": printing documentation missing: " + needed)
         readme = model / "README.md"
         if not readme.is_file():
             errors.append(name + ": README.md missing")

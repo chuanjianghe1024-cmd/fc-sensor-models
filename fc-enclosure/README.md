@@ -19,6 +19,7 @@ ESP32-C3 SuperMini 与 BH1750 背靠背安装的显示器顶部折叠外壳。�
 
 - [ESP32-C3 SuperMini](../assets/esp32-c3-supermini/)：C3 板卡参考。
 - [BH1750 / GY-302](../assets/bh1750-gy302/)：光照模块参考。
+- [打印输出与摆盘](print/README.md)：当前 L7 的 STL、STEP、通用 3MF，以及验证/生产摆盘方案。
 - [装配说明](ASSEMBLY.md)：尺寸、定位、转轴、胶接及打印摆放。
 - 接线说明：尚未整理；需要时增加本目录 WIRING.md，并以实际固件引脚和模块丝印核对，不从几何模型推断线序。
 
@@ -31,6 +32,9 @@ F3D 已嵌入的参考组件保持不变。assets 为共享参考入口，不意
 [原始检查、打印导出及脚本](https://github.com/chuanjianghe1024-cmd/fc-sensor-models/tree/bd3a33ef6047b93d584d7ea6c29092cb1b13ddc1/03_FC传感器外壳/当前版本_L7_加宽套口藏胶)。通用 3MF 不等同于已配置拓竹机型/AMS 的工程。
 
 ## 更新日志
+
+### 2026-10-31 — 打印输出归档
+恢复同版 L7 零件导出至 print/，按格式归类；增加验证与生产摆盘方案。尚无实际切片摆盘工程，未重新生成或验证几何。
 
 ### 2026-10-31 — 项目与资源分离
 项目移至根目录 fc-enclosure；参考模块统一移入 assets；装配说明独立到 ASSEMBLY.md。几何不变。
