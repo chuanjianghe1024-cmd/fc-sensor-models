@@ -149,13 +149,12 @@ When geometry changes, regenerate affected exports, update both plate categories
 
 Major Markdown documents are bilingual by default, with Chinese followed by matching English paragraphs or sections in the same file. Keep the root showcase concise; use bilingual table cells and avoid repeating images. Maintain both languages for new wiring, assembly, plate instructions and changelogs. Preserve exact paths, commands, version fields and dimensions; do not duplicate machine-readable fields or create separate English copies. Raw logs, code and upstream documents may retain their original language. Check that status, quantities and limitations agree across languages before committing.
 
-
 ## 使用许可 / Usage license
 
-本项目原创内容采用 [个人非商业使用许可 1.0](LICENSE)，仅供自然人个人非商业自用，可学习、修改和自制；不允许商业项目集成、企业业务或客户用途、收费服务，以及软件、固件、模型或打印成品销售。独立再分发也不获授权；向官方贡献的有限 fork/PR 例外见许可。其他用途须取得相关权利人书面授权。第三方及历史授权保持有效；这是源码/设计公开的受限许可，不是 OSI 开源许可。
+当前采用 [PolyForm Noncommercial 1.0.0](LICENSE)，允许许可定义范围内的非商业使用、修改和分发，包括条款列明的教育、科研、慈善等机构用途；不限于个人自用。不授予一般商业用途，其他用途需相关权利人另行授权。分发须遵守许可及声明保留要求。第三方内容和此前合法取得的授权保持有效。这是源码/设计可见的非商业许可，不是 OSI 开源许可；摘要不增加或替代 LICENSE 的条款。
 
-Original project material uses the [Personal Noncommercial Use License 1.0](LICENSE), solely for an individual's own noncommercial use, study, modification and DIY fabrication. Commercial integration, business/customer use, paid services and sales of software, firmware, models or printed products are not permitted. Independent redistribution is not granted; see the limited upstream fork/PR contribution exception. Other uses require written permission from the relevant rightsholders. Third-party and earlier grants remain effective. This is a restricted source/design-available license, not an OSI open-source license.
+The current license is [PolyForm Noncommercial 1.0.0](LICENSE). It permits noncommercial use, modification and distribution as defined by the license, including the listed educational, research and charitable organization uses; it is not limited to personal use. General commercial use is not granted; other uses require separate permission from the relevant rightsholders. Follow the license and notice requirements when distributing. Third-party terms and previously lawfully obtained grants remain effective. This is a source/design-available noncommercial license, not an OSI open-source license; this summary does not add to or replace LICENSE.
 
-新下载包必须附同版 LICENSE；保留第三方声明，不改历史标签。贡献仅按本许可提供有权提交的内容。
+本许可用于本项目有权授权的原创设计文件、脚本和文档。模型下载包应附同版 LICENSE 及第三方声明。PolyForm 面向软件起草，此采用不承诺覆盖所有实体制造、外观设计或专利权；生产摆盘不是另行商业生产授权。assets/esp32-c3-supermini 的上游授权未记录，该参考及其嵌入部分不由本许可补授权，使用或分发前须另行核实。历史标签保持原样。
 
-New download bundles must include the matching LICENSE and third-party notices. Preserve historical tags. Submit only contributions you are entitled to offer under these terms.
+These terms apply to original design files, scripts and documentation the project is entitled to license. Include the matching LICENSE and third-party notices in model bundles. PolyForm was drafted for software; adoption does not claim to cover all physical manufacturing, design or patent rights. Production plates are not separate commercial manufacturing permission. Upstream permission for assets/esp32-c3-supermini is unrecorded; this license does not supply permission for that reference or embedded copies. Verify rights separately before use or distribution. Historical tags remain unchanged.
