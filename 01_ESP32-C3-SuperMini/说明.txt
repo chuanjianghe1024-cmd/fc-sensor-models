@@ -1,9 +1,0 @@
-ESP32-C3 SuperMini 模块
-
-首选：校准模型与脚本/C3-SuperMini-calibrated-mm.stl（毫米）。
-PCB：22.5 × 17.8 mm；USB 向板外突出约 1 mm；含 USB 长 23.5 mm。
-USB 金属外形参考：8.8 × 3.1 mm。
-模型总包络约 23.5 × 17.8 × 4.1 mm；这是模块参考包络，不是焊好两块板和导线后的包络。
-PCB 厚 1 mm 沿用原始参考，未实测；其他元件位置/形状为近似。详细记录见 calibration.json。
-原始下载模型单独保存，后续装配优先用校准模型。当前没有独立 C3 原生实体 STEP/Fusion 特征模型。
-校准脚本已使用仓库相对路径，运行前需准备 numpy/trimesh 等 Python 依赖。

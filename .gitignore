@@ -1,10 +1,9 @@
-# Rebuild output is intentionally separate from curated releases.
 generated/
+**/generated/
 __pycache__/
-*.py[cod]
+*.pyc
 .DS_Store
 Thumbs.db
 *.tmp
 *.bak
-*.log
-.vscode/
+~$*

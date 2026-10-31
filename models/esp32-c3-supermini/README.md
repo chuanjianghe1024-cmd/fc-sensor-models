@@ -1,0 +1,21 @@
+# ESP32-C3 SuperMini
+
+Version: legacy-reference
+Tag: none
+
+用于外壳装配占位的校准模块参考，唯一主文件为 [model.stl](model.stl)，导入单位 **mm**。目前没有独立 Fusion 原生特征模型；这是迁移例外，不能把 STL 改名为 F3D。
+
+PCB 22.5×17.8，含 USB 长 23.5；USB 参考外形 8.8×3.1；总包络约 23.5×17.8×4.1。板厚 1 mm 沿用源模型，非实测；小元件近似，不含焊点、飞线及组合后的绝缘层。保留模型现有坐标，原点定义尚待在 Fusion 核对。
+
+来源：原记录为本机下载的 esp32c3supermini.stl，经尺寸校准。上游作者/授权未记录，不能据此宣称原创或已有再分发许可。源网格、校准脚本和参数可从[整理前目录](https://github.com/chuanjianghe1024-cmd/fc-sensor-models/tree/bd3a33ef6047b93d584d7ea6c29092cb1b13ddc1/01_ESP32-C3-SuperMini)追溯。
+
+## 预览与状态
+
+无现成截图。待在 Fusion 导入核对、导出唯一原生模型，补 images/three-view.png 与 images/exploded.png；此模块为装配参考，若无可拆分件，后者展示部件并标注即可。不能声称网格转换后具有原生参数化特征。
+
+历史校准记录标注网格封闭、3400 面；此次仅移动同一 blob，没有重新验证尺寸或网格。未发布独立 tag。
+
+## 更新日志
+
+### 2026-10-31 — 整理
+只保留校准后的主模型，原始下载网格/脚本转由 Git 历史追溯。几何不变。
